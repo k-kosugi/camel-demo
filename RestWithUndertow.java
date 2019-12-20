@@ -12,8 +12,7 @@ rest()
             .to("direct:hello");
 
         from("direct:hello")
-            //.setHeader(Exchange.CONTENT_TYPE, constant("text/plain"))
-            .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-            .transform().simple("{'message': 'hello'}");
+            .setHeader(Exchange.CONTENT_TYPE, constant("text/plain"))
+            .transform().simple("hello");
     }
 }
